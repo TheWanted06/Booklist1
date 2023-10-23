@@ -10,10 +10,10 @@ import Book_Details from './Components/Book_Details';
 import Add_Book from './Components/Add_Book';
 
 /*
-export type RootStackParamList = {
-  Home: {sort: 'latest' | 'top'} | undefined;
-  Book_Details: { BookId: string};
-  Add_Book: undefined;
+export const RootStackParamList = {
+  Home: {sort: 'latest' | 'top'} | undefined,
+  Book_Details: { BookId: String},
+  Add_Book: undefined
 };
 */
 

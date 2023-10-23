@@ -1,7 +1,11 @@
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from "react-native";
 import React from "react";
 
-const Home = () => {
+//navigation
+import {NativeStackScreenProps} from "@react-navigation/native-stack";
+
+
+const Home = ({navigation}) => {
     return(
         <View style={styles.container}>
             <Text style={styles.sectionTitle}>BookList</Text>
@@ -14,15 +18,18 @@ const Home = () => {
             >
                 <View style={styles.taskwrapper}>
 
-
+                    <Text>This is book 1</Text>
+                    <Text>This is book 2</Text>
                 </View>
 
             </ScrollView>
-            <TouchableOpacity style={styles.Button}>
-                <View style={styles.addWrapper}>
-                    <Text style={styles.addText}>+</Text>
-                </View>
-            </TouchableOpacity>
+            <View style={styles.Button}>
+                <TouchableOpacity onPress={() => navigation.navigate('Add_Book')}>
+                    <View style={styles.addWrapper}>
+                        <Text style={styles.addText}>+</Text>
+                    </View>
+                </TouchableOpacity>
+            </View>
         </View>
     )
 }
